@@ -2,7 +2,7 @@
 
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
-    define(factory);
+    define(['exports'], factory);
   } else if (typeof exports === 'object') {
     factory(exports);
   } else {
@@ -10,7 +10,7 @@
 
     factory(root.FizzBuzz);
   }
-})(this, function() {
+})(this, function(exports) {
   exports.combinations = [
     {number: 3, word: 'Fizz'},
     {number: 5, word: 'Buzz'}
@@ -18,10 +18,6 @@
 
   exports.wordFor = wordFor;
   exports.run = run;
-
-  if (exports.main === module) {
-    exports.run();
-  }
 
   function wordFor(number) {
     var result = '';
