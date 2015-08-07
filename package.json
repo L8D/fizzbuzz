@@ -1,0 +1,13 @@
+{
+  "name": "fizzbuzz",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "expect": "^1.8.0",
+    "mocha": "^2.2.5"
+  }
+}
